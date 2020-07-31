@@ -1,0 +1,156 @@
+/* DEFAULT */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(24, 226, 192, 0.9);
+  font-family: "Poppins", sans-serif;
+  color: #333333;
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 650px;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* weather button and label */
+#weather-input {
+  padding: 15px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #888888;
+  font-size: 1rem;
+}
+
+#weather-input:hover {
+  background-color: rgba(188, 238, 230, 0.9);
+}
+
+#weather-btn {
+  padding: 15px;
+  border-radius: 5px;
+  border: 3px solid black;
+  cursor: pointer;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  background-color: #888888;
+  font-size: 1rem;
+}
+
+#weather-btn:hover {
+  background-color: rgba(188, 238, 230, 0.9);
+}
+/* weather button and label end */
+
+.container {
+  flex-grow: 1;
+}
+
+header {
+  margin: 1rem 0 3rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.li-flex {
+  display: flex;
+  list-style-type: none;
+}
+
+header li a {
+  color: #888888;
+  /* padding: 10px; */
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+header li a:hover {
+  border-bottom: 2px solid #888888;
+  padding-bottom: 10px;
+}
+
+.about-content {
+  line-height: 1.5;
+  /* padding: 5px; */
+}
+
+.author {
+  width: 250px;
+  border-radius: 5px;
+}
+
+/*Contact Form*/
+#contact-form {
+  width: 250px;
+  margin-top: 40px;
+}
+
+.form-wrap {
+  background: #888888;
+  padding: 20px;
+  border-radius: 5%;
+}
+
+.form-group {
+  margin: 20px 0;
+}
+
+.form-label {
+  /* label takes all its needed space and displays form in block*/
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px; /*Space btw d labels, first name email etc*/
+  color: #333333;
+}
+
+.form-input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#form-btn {
+  width: 90%;
+  /* background: darkolivegreen; */
+  background-color: rgba(24, 226, 192, 0.9);
+  color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#form-btn:hover {
+  background-color: rgba(188, 238, 230, 0.9);
+}
+
+/*Contact form end*/
+
+footer {
+  margin: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #eeeeee;
+  color: #888888;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
