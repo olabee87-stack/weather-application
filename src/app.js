@@ -42,6 +42,33 @@ app.get("/contact", (req, res) => {
   });
 });
 
+app.get("/weather", (req, res) => {
+  if (!req.query.address) {
+    return res.send("You must provide an address!");
+  }
+
+  geoCode(
+    req.query.address,
+    (error, { latitude, longitude, location } = {}) => {
+      if (error) {
+        return res.send({ error });
+      }
+
+      forecast(latitude, longitude, (error, forecastData) => {
+        if (error) {
+          return res.send({ error });
+        } else {
+          res.send({
+            forecast: forecastData,
+            location,
+            address: req.query.address,
+          });
+        }
+      });
+    }
+  );
+});
+
 app.get("/contact/*", (req, res) => {
   res.render("404", {
     title: "404 Error",
