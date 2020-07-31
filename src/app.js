@@ -18,3 +18,47 @@ hbs.registerPartials(partialsPath);
 
 //Set up static html directory to serve(if HTML)
 app.use(express.static(publicDirectoryPath));
+
+//Client-side URL
+app.get("/", (req, res) => {
+  res.render("index", {
+    title: "Weather",
+    name: "Olabisi Odusanya",
+  });
+});
+
+app.get("/about", (req, res) => {
+  res.render("about", {
+    title: "About",
+    name: "Olabisi Odusanya",
+  });
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact", {
+    title: "Contact Us",
+    content: "If you have any questions, please contact me.",
+    name: "Olabisi Odusanya",
+  });
+});
+
+app.get("/contact/*", (req, res) => {
+  res.render("404", {
+    title: "404 Error",
+    missingPage: "Help article not found",
+    name: "Olabisi Odusanya",
+  });
+});
+
+app.get("*", (req, res) => {
+  res.render("404", {
+    title: " 404 Error",
+    missingPage: "404! Page not found!",
+    name: "Olabisi Odusanya",
+  });
+});
+
+//Localhost port
+app.listen(3000, () => {
+  console.log("Server successfully started on port 3000");
+});
