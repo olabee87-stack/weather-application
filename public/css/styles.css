@@ -7,7 +7,8 @@
 }
 
 body {
-  background-color: rgba(24, 226, 192, 0.9);
+  /* background-color: rgba(24, 226, 192, 0.9); */
+  background-color: rgba(177, 204, 200, 0.9);
   font-family: "Poppins", sans-serif;
   color: #333333;
   margin: 0 auto;
@@ -129,7 +130,7 @@ header li a:hover {
 #form-btn {
   width: 90%;
   /* background: darkolivegreen; */
-  background-color: rgba(24, 226, 192, 0.9);
+  background-color: rgba(177, 204, 200, 0.9);
   color: #333333;
   padding: 10px;
   border-radius: 5px;
@@ -141,7 +142,7 @@ header li a:hover {
 }
 
 #form-btn:hover {
-  background-color: rgba(188, 238, 230, 0.9);
+  background-color: rgba(220, 233, 231, 0.9);
 }
 
 /*Contact form end*/
