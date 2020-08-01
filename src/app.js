@@ -6,6 +6,9 @@ const forecast = require("./utils/forecast");
 
 const app = express();
 
+//Heroku port/localhost port
+const port = process.env.PORT || 3005;
+
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
@@ -86,6 +89,7 @@ app.get("*", (req, res) => {
 });
 
 //Localhost port
-app.listen(3005, () => {
-  console.log("Server successfully started on port 3005");
+
+app.listen(port, () => {
+  console.log("Server successfully started on port " + port);
 });
