@@ -87,5 +87,5 @@ app.get("*", (req, res) => {
 
 //Localhost port
 app.listen(3005, () => {
-  console.log("Server successfully started on port 3000");
+  console.log("Server successfully started on port 3005");
 });
