@@ -18,9 +18,10 @@ const forecast = (longitude, latitude, callback) => {
         undefined
       );
     } else {
+      console.log(body);
       callback(
         undefined,
-        `The weather is ${body.current.temperature} degree celsius, it feels like ${body.current.feelslike} degrees, the humidity is ${body.current.humidity} and it is ${body.current.weather_descriptions[0]}`
+        `The weather is ${body.current.temperature} degree celsius, it feels like ${body.current.feelslike} degrees, the humidity is ${body.current.humidity}% and it is ${body.current.weather_descriptions[0]}`
       );
     }
   });
